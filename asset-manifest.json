@@ -1,30 +1,41 @@
 {
   "files": {
     "main.css": "/airpods/static/css/main.96ea0529.chunk.css",
-    "main.js": "/airpods/static/js/main.a201bec0.chunk.js",
-    "main.js.map": "/airpods/static/js/main.a201bec0.chunk.js.map",
-    "runtime-main.js": "/airpods/static/js/runtime-main.bcaff6cf.js",
-    "runtime-main.js.map": "/airpods/static/js/runtime-main.bcaff6cf.js.map",
-    "static/js/2.98712555.chunk.js": "/airpods/static/js/2.98712555.chunk.js",
-    "static/js/2.98712555.chunk.js.map": "/airpods/static/js/2.98712555.chunk.js.map",
+    "main.js": "/airpods/static/js/main.2efab837.chunk.js",
+    "main.js.map": "/airpods/static/js/main.2efab837.chunk.js.map",
+    "runtime-main.js": "/airpods/static/js/runtime-main.47e1e059.js",
+    "runtime-main.js.map": "/airpods/static/js/runtime-main.47e1e059.js.map",
+    "static/js/2.c44fc745.chunk.js": "/airpods/static/js/2.c44fc745.chunk.js",
+    "static/js/2.c44fc745.chunk.js.map": "/airpods/static/js/2.c44fc745.chunk.js.map",
     "index.html": "/airpods/index.html",
-    "precache-manifest.f4728167cb46bee778470001b1e1147d.js": "/airpods/precache-manifest.f4728167cb46bee778470001b1e1147d.js",
+    "precache-manifest.f60b07e02ae27d901e9d8e9c7d28783f.js": "/airpods/precache-manifest.f60b07e02ae27d901e9d8e9c7d28783f.js",
     "service-worker.js": "/airpods/service-worker.js",
     "static/css/main.96ea0529.chunk.css.map": "/airpods/static/css/main.96ea0529.chunk.css.map",
-    "static/js/2.98712555.chunk.js.LICENSE.txt": "/airpods/static/js/2.98712555.chunk.js.LICENSE.txt",
+    "static/js/2.c44fc745.chunk.js.LICENSE.txt": "/airpods/static/js/2.c44fc745.chunk.js.LICENSE.txt",
+    "static/media/Airpods2_3.jpeg": "/airpods/static/media/Airpods2_3.8c334f68.jpeg",
+    "static/media/Check.jpg": "/airpods/static/media/Check.3c9e4b32.jpg",
     "static/media/airpods1.jpg": "/airpods/static/media/airpods1.305e85fc.jpg",
+    "static/media/airpods1_1.jpg": "/airpods/static/media/airpods1_1.0184b10e.jpg",
     "static/media/airpods1_item.jpg": "/airpods/static/media/airpods1_item.78b7cdff.jpg",
+    "static/media/airpods2_1.jpg": "/airpods/static/media/airpods2_1.2ebccbfd.jpg",
     "static/media/airpods2_item.jpg": "/airpods/static/media/airpods2_item.265fedab.jpg",
     "static/media/airpodspro_item.jpg": "/airpods/static/media/airpodspro_item.b5e1a099.jpg",
+    "static/media/apple-airpods_2.jpg": "/airpods/static/media/apple-airpods_2.89e71837.jpg",
+    "static/media/apple-airpods_3.jpg": "/airpods/static/media/apple-airpods_3.9154bac0.jpg",
+    "static/media/bullet.svg": "/airpods/static/media/bullet.47232ac0.svg",
     "static/media/delivery.jpg": "/airpods/static/media/delivery.433f1c23.jpg",
     "static/media/gear.svg": "/airpods/static/media/gear.ae32a512.svg",
     "static/media/medal.png": "/airpods/static/media/medal.e577759e.png",
-    "static/media/protection.jpg": "/airpods/static/media/protection.f0737811.jpg"
+    "static/media/pro1.jpeg": "/airpods/static/media/pro1.b444471c.jpeg",
+    "static/media/pro2.jpeg": "/airpods/static/media/pro2.f2d15112.jpeg",
+    "static/media/pro3.jpeg": "/airpods/static/media/pro3.d91e4299.jpeg",
+    "static/media/protection.jpg": "/airpods/static/media/protection.f0737811.jpg",
+    "static/media/zakaz.jpg": "/airpods/static/media/zakaz.ffc3065b.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.bcaff6cf.js",
-    "static/js/2.98712555.chunk.js",
+    "static/js/runtime-main.47e1e059.js",
+    "static/js/2.c44fc745.chunk.js",
     "static/css/main.96ea0529.chunk.css",
-    "static/js/main.a201bec0.chunk.js"
+    "static/js/main.2efab837.chunk.js"
   ]
 }

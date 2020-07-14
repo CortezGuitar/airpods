@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/airpods/precache-manifest.f4728167cb46bee778470001b1e1147d.js"
+  "/airpods/precache-manifest.f60b07e02ae27d901e9d8e9c7d28783f.js"
 );
 
 self.addEventListener('message', (event) => {
