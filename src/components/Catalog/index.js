@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { ImgWrap, Container, ContainerWrap, Button } from '../General';
 import Airpods1 from '../../images/airpods1_item.jpg';
 import Airpods2 from '../../images/airpods2_item.jpg';
 import AirpodsPro from '../../images/airpodspro_item.jpg';
+import Product from '../Product';
+import Airpods11 from '../../images/airpods1/airpods1_1.jpg';
+import Airpods12 from '../../images/airpods1/apple-airpods_2.jpg';
+import Airpods13 from '../../images/airpods1/apple-airpods_3.jpg';
+import Airpods21 from '../../images/airpods2/airpods2_1.jpg';
+import Airpods22 from '../../images/airpods2/airpods2_2.jpg';
+import Airpods23 from '../../images/airpods2/Airpods2_3.jpeg';
+import AirpodsPro1 from '../../images/airpodsPro/pro1.jpeg';
+import AirpodsPro2 from '../../images/airpodsPro/pro2.jpeg';
+import AirpodsPro3 from '../../images/airpodsPro/pro3.jpeg';
 
 const CatalogSection = styled.section``;
 
@@ -48,6 +58,12 @@ const CatalogItemLabel = styled.div`
     font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center;
+    min-height: 72px;
+
+    span {
+        font-size: 1.3rem;
+    }
 `;
 
 const CatalogItemPrice = styled.div`
@@ -60,43 +76,97 @@ const CatalogItemButton = styled(Button)``;
 
 const catalogList = [
     {
-        label: 'Air Pods 1',
+        label: <CatalogItemLabel>Air Pods 1</CatalogItemLabel>,
         price: '8490 грн',
         image: Airpods1,
+        title: 'Наушники Apple AirPods 1',
+        photos: [Airpods11, Airpods12, Airpods13],
+        id: 1,
     },
     {
-        label: 'Air Pods 2',
+        label: (
+            <CatalogItemLabel>
+                Air Pods 2<br />
+                <span>(Wireless case)</span>
+            </CatalogItemLabel>
+        ),
         price: '9490 грн',
         image: Airpods2,
+        title: 'Наушники Apple AirPods 2 с возможностью беспроводной зарядки',
+        photos: [Airpods21, Airpods22, Airpods23],
+        id: 2,
     },
     {
-        label: 'Air Pods Pro',
+        label: (
+            <CatalogItemLabel>
+                Air Pods Pro
+                <br />
+                <span>(Последняя версия)</span>
+            </CatalogItemLabel>
+        ),
         price: '11 490 грн',
         image: AirpodsPro,
+        title: 'Наушники Apple AirPods Pro (Последняя версия)',
+        photos: [AirpodsPro1, AirpodsPro2, AirpodsPro3],
+        id: 3,
     },
 ];
 
-function Catalog() {
+const Catalog = React.forwardRef(({ orderHandler }, ref) => {
+    const [currentProduct, setCurrentProduct] = useState(0);
+    const [overview, setShowOverview] = useState(true);
+
+    const handleCurrentProduct = (index) => {
+        return () => {
+            setCurrentProduct(index);
+            setShowOverview(false);
+        };
+    };
+
+    const handleBackBtn = () => {
+        return () => setShowOverview(true);
+    };
+
+    const handleShowOrderPopup = (e) => {
+        e.stopPropagation();
+        orderHandler();
+    };
+
     return (
-        <CatalogSection>
+        <CatalogSection ref={ref}>
             <CatalogContainerWrap>
-                <CatalogContainer>
-                    {catalogList.map(({ label, image, price }) => (
-                        <CatalogItem key={label}>
-                            <CatalogItemLabel>{label}</CatalogItemLabel>
-                            <CatalogItemImg>
-                                <img src={image} alt="" />
-                            </CatalogItemImg>
-                            <CatalogItemPrice>{price}</CatalogItemPrice>
-                            <CatalogItemButton>
-                                оформить заявку
-                            </CatalogItemButton>
-                        </CatalogItem>
-                    ))}
-                </CatalogContainer>
+                {overview ? (
+                    <CatalogContainer>
+                        {catalogList.map(
+                            ({ label, image, price, id }, index) => (
+                                <CatalogItem
+                                    key={index}
+                                    onClick={handleCurrentProduct(index)}
+                                >
+                                    {label}
+                                    <CatalogItemImg>
+                                        <img src={image} alt="" />
+                                    </CatalogItemImg>
+                                    <CatalogItemPrice>{price}</CatalogItemPrice>
+                                    <CatalogItemButton
+                                        onClick={handleShowOrderPopup}
+                                    >
+                                        оформить заявку
+                                    </CatalogItemButton>
+                                </CatalogItem>
+                            )
+                        )}
+                    </CatalogContainer>
+                ) : (
+                    <Product
+                        product={catalogList[currentProduct]}
+                        backBtn={handleBackBtn()}
+                        orderBtn={handleShowOrderPopup}
+                    />
+                )}
             </CatalogContainerWrap>
         </CatalogSection>
     );
-}
+});
 
 export default Catalog;

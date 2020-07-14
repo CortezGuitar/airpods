@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 export const ContainerWrap = styled.div`
     max-width: 1366px;
     margin: 0 auto;
+    overflow: hidden;
 `;
 
 export const Container = styled.div`
@@ -30,6 +31,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+    outline: none;
 
     :hover {
         background-color: white;
