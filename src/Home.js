@@ -47,6 +47,7 @@ const Logo = styled(ImgWrap)`
 `;
 
 const LogoMobile = styled(Logo)`
+    display: none;
     @media all and (max-width: 767px) {
         display: block;
     }
