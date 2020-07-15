@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/airpods/static/css/main.96ea0529.chunk.css",
-    "main.js": "/airpods/static/js/main.2efab837.chunk.js",
-    "main.js.map": "/airpods/static/js/main.2efab837.chunk.js.map",
+    "main.js": "/airpods/static/js/main.a106699a.chunk.js",
+    "main.js.map": "/airpods/static/js/main.a106699a.chunk.js.map",
     "runtime-main.js": "/airpods/static/js/runtime-main.47e1e059.js",
     "runtime-main.js.map": "/airpods/static/js/runtime-main.47e1e059.js.map",
-    "static/js/2.c44fc745.chunk.js": "/airpods/static/js/2.c44fc745.chunk.js",
-    "static/js/2.c44fc745.chunk.js.map": "/airpods/static/js/2.c44fc745.chunk.js.map",
+    "static/js/2.77d281db.chunk.js": "/airpods/static/js/2.77d281db.chunk.js",
+    "static/js/2.77d281db.chunk.js.map": "/airpods/static/js/2.77d281db.chunk.js.map",
     "index.html": "/airpods/index.html",
-    "precache-manifest.f60b07e02ae27d901e9d8e9c7d28783f.js": "/airpods/precache-manifest.f60b07e02ae27d901e9d8e9c7d28783f.js",
+    "precache-manifest.77b0a93097f61c93ca412e790ac5ffb9.js": "/airpods/precache-manifest.77b0a93097f61c93ca412e790ac5ffb9.js",
     "service-worker.js": "/airpods/service-worker.js",
     "static/css/main.96ea0529.chunk.css.map": "/airpods/static/css/main.96ea0529.chunk.css.map",
-    "static/js/2.c44fc745.chunk.js.LICENSE.txt": "/airpods/static/js/2.c44fc745.chunk.js.LICENSE.txt",
+    "static/js/2.77d281db.chunk.js.LICENSE.txt": "/airpods/static/js/2.77d281db.chunk.js.LICENSE.txt",
     "static/media/Airpods2_3.jpeg": "/airpods/static/media/Airpods2_3.8c334f68.jpeg",
     "static/media/Check.jpg": "/airpods/static/media/Check.3c9e4b32.jpg",
     "static/media/airpods1.jpg": "/airpods/static/media/airpods1.305e85fc.jpg",
@@ -34,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.47e1e059.js",
-    "static/js/2.c44fc745.chunk.js",
+    "static/js/2.77d281db.chunk.js",
     "static/css/main.96ea0529.chunk.css",
-    "static/js/main.2efab837.chunk.js"
+    "static/js/main.a106699a.chunk.js"
   ]
 }
