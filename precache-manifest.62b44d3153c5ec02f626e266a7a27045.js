@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3b3e97de96be5ed8f5e276e644737dc",
+    "revision": "5b5f0107d57ba05cbc9a37e86a5d66df",
     "url": "/airpods/index.html"
   },
   {
-    "revision": "4520f36e829ae5922d7c",
+    "revision": "600714e135fb82cf62db",
     "url": "/airpods/static/css/main.96ea0529.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/airpods/static/js/2.77d281db.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4520f36e829ae5922d7c",
-    "url": "/airpods/static/js/main.a106699a.chunk.js"
+    "revision": "600714e135fb82cf62db",
+    "url": "/airpods/static/js/main.fedd8859.chunk.js"
   },
   {
     "revision": "50190c63c7c4587faae9",

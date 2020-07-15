@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/airpods/static/css/main.96ea0529.chunk.css",
-    "main.js": "/airpods/static/js/main.a106699a.chunk.js",
-    "main.js.map": "/airpods/static/js/main.a106699a.chunk.js.map",
+    "main.js": "/airpods/static/js/main.fedd8859.chunk.js",
+    "main.js.map": "/airpods/static/js/main.fedd8859.chunk.js.map",
     "runtime-main.js": "/airpods/static/js/runtime-main.47e1e059.js",
     "runtime-main.js.map": "/airpods/static/js/runtime-main.47e1e059.js.map",
     "static/js/2.77d281db.chunk.js": "/airpods/static/js/2.77d281db.chunk.js",
     "static/js/2.77d281db.chunk.js.map": "/airpods/static/js/2.77d281db.chunk.js.map",
     "index.html": "/airpods/index.html",
-    "precache-manifest.77b0a93097f61c93ca412e790ac5ffb9.js": "/airpods/precache-manifest.77b0a93097f61c93ca412e790ac5ffb9.js",
+    "precache-manifest.62b44d3153c5ec02f626e266a7a27045.js": "/airpods/precache-manifest.62b44d3153c5ec02f626e266a7a27045.js",
     "service-worker.js": "/airpods/service-worker.js",
     "static/css/main.96ea0529.chunk.css.map": "/airpods/static/css/main.96ea0529.chunk.css.map",
     "static/js/2.77d281db.chunk.js.LICENSE.txt": "/airpods/static/js/2.77d281db.chunk.js.LICENSE.txt",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.47e1e059.js",
     "static/js/2.77d281db.chunk.js",
     "static/css/main.96ea0529.chunk.css",
-    "static/js/main.a106699a.chunk.js"
+    "static/js/main.fedd8859.chunk.js"
   ]
 }
