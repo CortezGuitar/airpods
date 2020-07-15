@@ -26,6 +26,14 @@ const CatalogContainer = styled(Container)`
     display: flex;
     justify-content: space-around;
     width: 100%;
+
+    @media all and (max-width: 768px) {
+        flex-wrap: wrap;
+        padding: 2rem 3rem;
+    }
+    @media all and (max-width: 767px) {
+        padding: 2rem 1rem;
+    }
 `;
 
 const CatalogItem = styled.div`
@@ -46,12 +54,20 @@ const CatalogItem = styled.div`
         box-shadow: 3px 6px 20px 0 rgb(0, 0, 0, 0.5);
         transform: translateY(-1rem);
     }
+
+    @media all and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 `;
 
 const CatalogItemImg = styled(ImgWrap)`
     width: 200px;
     height: 366px;
     margin-bottom: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
 `;
 
 const CatalogItemLabel = styled.div`
@@ -120,11 +136,21 @@ const Catalog = React.forwardRef(({ orderHandler }, ref) => {
         return () => {
             setCurrentProduct(index);
             setShowOverview(false);
+            window.scrollTo({
+                top: ref.current.offsetTop - 100,
+                behavior: 'smooth',
+            });
         };
     };
 
     const handleBackBtn = () => {
-        return () => setShowOverview(true);
+        return () => {
+            setShowOverview(true);
+            window.scrollTo({
+                top: ref.current.offsetTop - 100,
+                behavior: 'smooth',
+            });
+        };
     };
 
     const handleShowOrderPopup = (e) => {

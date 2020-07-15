@@ -9,6 +9,11 @@ const ProductWrap = styled(Container)`
     display: flex;
     justify-content: space-between;
     padding: 2rem 0;
+
+    @media all and (max-width: 767px) {
+        flex-wrap: wrap;
+        padding: 2rem 1rem;
+    }
 `;
 
 const PhotosWrap = styled.div`
@@ -17,6 +22,11 @@ const PhotosWrap = styled.div`
     background-color: #fff;
     border-radius: 6px;
     padding: 0.5rem;
+
+    @media all and (max-width: 767px) {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
 `;
 
 const DescWrap = styled.div`
@@ -34,7 +44,12 @@ const ProductBigPhoto = styled(ImgWrap)`
     width: 100%;
     height: 340px;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 767px) {
+        margin: 0;
+    }
 `;
+
 const ProductSmallPhoto = styled(ImgWrap)`
     box-shadow: ${({ current }) =>
         current ? '0px 0px 3px rgb(232, 53, 135)' : '0px 0px 3px white'};
@@ -42,6 +57,7 @@ const ProductSmallPhoto = styled(ImgWrap)`
     height: 72px;
     cursor: pointer;
 `;
+
 const SmallPhotosList = styled.div`
     display: flex;
     justify-content: space-around;
@@ -50,6 +66,17 @@ const SmallPhotosList = styled.div`
 const BackBtn = styled(Button)`
     padding: 0 1rem;
     height: 2.5rem;
+
+    @media all and (max-width: 767px) {
+        display: none;
+    }
+`;
+
+const BackBtnMobile = styled(Button)`
+    @media all and (max-width: 767px) {
+        width: 100%;
+        opacity: 0.6;
+    }
 `;
 
 const ProductTitleWrap = styled.div`
@@ -63,6 +90,10 @@ const ProductTitle = styled.div`
     margin: 0 auto;
     text-align: center;
     max-width: 460px;
+
+    @media all and (max-width: 767px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const ProductInfo = styled.div`
@@ -76,6 +107,10 @@ const ProductPrice = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 767px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const ProductCheckWrap = styled(ImgWrap)`
@@ -113,12 +148,24 @@ const ProductInfoIcon = styled(ImgWrap)`
     margin-right: 1rem;
 `;
 
-const ProductInfoLabel = styled.div``;
+const ProductInfoLabel = styled.div`
+    @media all and (max-width: 767px) {
+        max-width: 260px;
+    }
+`;
 
 const ProductOrderBtn = styled(Button)`
     width: 318px;
     align-self: flex-end;
     margin-top: 2rem;
+
+    @media all and (max-width: 768px) {
+        margin: 2rem auto;
+    }
+    @media all and (max-width: 767px) {
+        width: 100%;
+        margin: 2rem auto 1rem auto;
+    }
 `;
 
 const infoList = [
@@ -137,7 +184,7 @@ function Product({ product, backBtn, orderBtn }) {
     };
 
     const handleBackBtn = () => {
-        backBtn(null);
+        backBtn();
     };
 
     const handleOrderBtn = (e) => {
@@ -146,10 +193,29 @@ function Product({ product, backBtn, orderBtn }) {
 
     return (
         <ProductWrap>
+            {photos && (
+                <PhotosWrap>
+                    <ProductBigPhoto>
+                        <img src={photos[currentPhoto]} alt="" />
+                    </ProductBigPhoto>
+
+                    <SmallPhotosList>
+                        {photos.map((item, index) => (
+                            <ProductSmallPhoto
+                                key={index}
+                                current={index === currentPhoto}
+                                onClick={handleCurrentPhoto(index)}
+                            >
+                                <img src={item} alt="" />
+                            </ProductSmallPhoto>
+                        ))}
+                    </SmallPhotosList>
+                </PhotosWrap>
+            )}
             <DescWrap>
                 <ProductTitleWrap>
-                    <BackBtn onClick={handleBackBtn}>назад</BackBtn>
                     <ProductTitle>{title}</ProductTitle>
+                    <BackBtn onClick={handleBackBtn}>назад</BackBtn>
                 </ProductTitleWrap>
                 <ProductInfo>
                     <ProductPrice>
@@ -173,28 +239,12 @@ function Product({ product, backBtn, orderBtn }) {
                         <ProductOrderBtn onClick={handleOrderBtn}>
                             Заказать
                         </ProductOrderBtn>
+                        <BackBtnMobile onClick={handleBackBtn}>
+                            Назад
+                        </BackBtnMobile>
                     </ProductInfoList>
                 </ProductInfo>
             </DescWrap>
-            {photos && (
-                <PhotosWrap>
-                    <ProductBigPhoto>
-                        <img src={photos[currentPhoto]} alt="" />
-                    </ProductBigPhoto>
-
-                    <SmallPhotosList>
-                        {photos.map((item, index) => (
-                            <ProductSmallPhoto
-                                key={index}
-                                current={index === currentPhoto}
-                                onClick={handleCurrentPhoto(index)}
-                            >
-                                <img src={item} alt="" />
-                            </ProductSmallPhoto>
-                        ))}
-                    </SmallPhotosList>
-                </PhotosWrap>
-            )}
         </ProductWrap>
     );
 }

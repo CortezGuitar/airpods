@@ -18,6 +18,10 @@ const PopupWrap = styled.div`
 
     animation: 300ms ease-in popup;
 
+    @media all and (max-width: 767px) {
+        width: 96%;
+    }
+
     @keyframes popup {
         from {
             top: 0;

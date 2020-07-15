@@ -24,6 +24,7 @@ const FormInput = styled.input`
     border: 1px solid grey;
     box-shadow: inset 0 0 1px;
     font-size: 1rem;
+    padding: 1rem;
     :focus {
         border: 2px solid grey;
         outline: 0;

@@ -41,6 +41,15 @@ const Logo = styled(ImgWrap)`
     width: 53px;
     height: 66px;
     cursor: pointer;
+    @media all and (max-width: 767px) {
+        display: none;
+    }
+`;
+
+const LogoMobile = styled(Logo)`
+    @media all and (max-width: 767px) {
+        display: block;
+    }
 `;
 
 const NavBar = styled.div`
@@ -50,12 +59,23 @@ const NavBar = styled.div`
     max-width: 600px;
     width: 100%;
     align-items: center;
+
+    @media all and (max-width: 768px) {
+        max-width: 460px;
+    }
+    @media all and (max-width: 767px) {
+        display: none;
+    }
 `;
 
 const NavItem = styled.div`
     cursor: pointer;
     :hover {
         color: rgb(232, 53, 135);
+    }
+
+    @media all and (max-width: 767px) {
+        font-size: 2rem;
     }
 `;
 
@@ -73,29 +93,53 @@ const MainSectionContent = styled.div`
     display: flex;
     justify-content: space-between;
     padding-top: 48px;
+
+    @media all and (max-width: 767px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 1rem;
+        height: 100vh;
+    }
 `;
 
 const MainSectionImage = styled(ImgWrap)`
     width: 440px;
     height: 600px;
+
+    @media all and (max-width: 768px) {
+        height: 460px;
+    }
+    @media all and (max-width: 767px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 320px;
+        padding-top: 2rem;
+    }
 `;
 
 const MainSectionTitleWrap = styled.div`
     padding: 150px 0;
     font-weight: bold;
     text-align: center;
+
+    @media all and (max-width: 767px) {
+        padding: 0;
+    }
 `;
 
 const MainSectionTitle = styled.div`
     font-size: 4rem;
     margin-bottom: 1rem;
     max-width: 560px;
-`;
 
-// const MainSectionSubtitle = styled.div`
-//     font-size: 1.5rem;
-//     margin-bottom: 2rem;
-// `;
+    @media all and (max-width: 768px) {
+        font-size: 3rem;
+    }
+    @media all and (max-width: 767px) {
+        font-size: 2rem;
+    }
+`;
 
 const MainButton = styled(Button)``;
 
@@ -104,6 +148,13 @@ const MainSectionFooter = styled.div`
     font-size: 3rem;
     padding: 4rem 0 1rem 0;
     font-weight: bold;
+
+    @media all and (max-width: 768px) {
+        font-size: 2.5rem;
+    }
+    @media all and (max-width: 767px) {
+        display: none;
+    }
 `;
 
 const DeliverySection = styled.section`
@@ -120,11 +171,19 @@ const DeliveryTitle = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media all and (max-width: 767px) {
+        font-size: 2rem;
+    }
 `;
 
 const DeliveryImg = styled(ImgWrap)`
     width: 600px;
     height: 244px;
+
+    @media all and (max-width: 767px) {
+        height: auto;
+    }
 `;
 
 const DeliveryPochta = styled(ImgWrap)`
@@ -138,6 +197,10 @@ const DeliveryTitleWrap = styled.div`
     display: flex;
     justify-content: center;
     padding: 1rem;
+
+    @media all and (max-width: 768px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const DeliveryDesc = styled.div`
@@ -148,13 +211,17 @@ const DeliveryDesc = styled.div`
     align-items: center;
     padding: 1rem 1rem 2rem 8rem;
     position: relative;
-    justify-content: flex-end;
+    justify-content: flex-start;
     margin: 1rem 0;
 `;
 
 const DeliveryDescTitle = styled.div`
     font-size: 3rem;
     font-weight: bold;
+
+    @media all and (max-width: 767px) {
+        font-size: 1.5rem;
+    }
 `;
 
 const DeliveryDescImg = styled(ImgWrap)`
@@ -166,6 +233,9 @@ const DeliveryDescImg = styled(ImgWrap)`
 
 const DeliveryDescText = styled.div`
     font-size: 1.05rem;
+    @media all and (max-width: 767px) {
+        font-size: 1rem;
+    }
 `;
 
 const ProtectionSection = styled.section`
@@ -179,6 +249,10 @@ const ProtectionTitle = styled.div`
     font-weight: bold;
     text-align: center;
     margin: 1rem 0 3rem;
+
+    @media all and (max-width: 767px) {
+        margin: 0 0 2rem;
+    }
 `;
 
 const ProtectionCard = styled.div`
@@ -186,11 +260,20 @@ const ProtectionCard = styled.div`
     padding: 2rem 1rem;
     display: flex;
     margin-bottom: 3rem;
+
+    @media all and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `;
 
 const ProtectionImgWrap = styled(ImgWrap)`
     width: 447px;
     height: 324px;
+
+    @media all and (max-width: 767px) {
+        height: 260px;
+    }
 `;
 
 const ProtectionCardTitleImg = styled(ImgWrap)`
@@ -212,35 +295,69 @@ const ProtectionCardTitleWrap = styled.div`
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+
+    @media all and (max-width: 767px) {
+    }
 `;
 
 const ProtectionCardTitle = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
+
+    @media all and (max-width: 767px) {
+        font-size: 1rem;
+    }
 `;
 const ProtectionCardDesc = styled.div`
     padding-left: 4rem;
     max-width: 600px;
+
+    @media all and (max-width: 767px) {
+        padding: 0;
+    }
 `;
 
-const DeliveryFormWrap = styled.div`
+const DeliveryFormWrap = styled(Container)`
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    padding-bottom: 4rem;
+
+    @media all and (max-width: 768px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @media all and (max-width: 768px) {
+        padding-bottom: 2rem;
+    }
 `;
 
 const DeliveryFormTitle = styled.div`
     font-size: 3rem;
     font-weight: bold;
+
+    @media all and (max-width: 767px) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
 `;
 
 const DeliveryFormImg = styled(ImgWrap)`
     max-width: 600px;
+
+    @media all and (max-width: 767px) {
+        margin-top: 1rem;
+    }
 `;
 
 const DeliveryFormDesc = styled.div`
     font-size: 1.1rem;
     margin-bottom: 2rem;
+
+    @media all and (max-width: 767px) {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
 `;
 
 const DeliveryForm = styled.div`
@@ -249,6 +366,10 @@ const DeliveryForm = styled.div`
     text-align: center;
     max-width: 60%;
     align-items: center;
+
+    @media all and (max-width: 767px) {
+        max-width: 100%;
+    }
 `;
 
 const FormWrap = styled.div`
@@ -266,6 +387,9 @@ const Footer = styled.div`
 const FooterContainer = styled(HeaderContainer)`
     justify-content: space-around;
     padding: 3rem 0;
+    @media all and (max-width: 767px) {
+        flex-wrap: wrap;
+    }
 `;
 
 const Overlay = styled.div`
@@ -282,26 +406,54 @@ const Overlay = styled.div`
 `;
 
 const OverlayWrap = styled.div`
-    ${({ show }) =>
-        show &&
-        css`
-            z-index: 0;
-            width: 100%;
-            filter: blur(6px);
-            overflow-y: hidden;
-            transition: filter 500ms ease-in;
-        `}
+    ${({ show }) => {
+        return (
+            show &&
+            css`
+                z-index: 0;
+                width: 100%;
+                filter: blur(6px);
+                overflow-y: hidden;
+                transition: filter 500ms ease-in;
+            `
+        );
+    }}
 `;
 
 const HomeWrapper = styled.div`
-    ${({ overlay }) =>
-        overlay &&
-        css`
-            position: relative;
-            overflow-y: hidden;
-            width: 100%;
-            height: 100vh;
-        `}
+    ${({ overlay }) => {
+        return (
+            overlay &&
+            css`
+                position: relative;
+                overflow-y: hidden;
+                width: 100%;
+                height: 100vh;
+            `
+        );
+    }}
+`;
+
+const MobileNav = styled.div`
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 6rem 3rem;
+    animation: 200ms ease-in mobilenav;
+
+    @keyframes mobilenav {
+        from {
+            left: -100%;
+        }
+        to {
+            left: 0;
+        }
+    }
 `;
 
 const scrollToRef = (ref) =>
@@ -313,11 +465,18 @@ const scrollToRef = (ref) =>
 function Home() {
     const [overlay, setShowOverlay] = useState(false);
     const [positionY, setPositionY] = useState(0);
+    const [mobileNav, setShowMobileNav] = useState(false);
 
     const catalogRef = useRef(null);
     const deliveryRef = useRef(null);
     const protectionRef = useRef(null);
-    const executeScroll = (itemRef) => scrollToRef(itemRef);
+
+    const executeScroll = (itemRef) => {
+        if (mobileNav === true) {
+            setShowMobileNav(false);
+        }
+        scrollToRef(itemRef);
+    };
 
     const navItems = [
         {
@@ -360,16 +519,57 @@ function Home() {
             });
     };
 
+    const handleShowMobileNav = () => {
+        setShowMobileNav(!mobileNav);
+        if (mobileNav === true) {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        }
+    };
+
     return (
         <HomeWrapper overlay={overlay}>
             {overlay && <Popup />}
+
             <Overlay show={overlay} onClick={handleHideOverlay} />
             <OverlayWrap show={overlay}>
                 <Header>
+                    {mobileNav && (
+                        <MobileNav>
+                            <LogoMobile onClick={handleShowMobileNav}>
+                                <img src={LogoImg} alt="" />
+                            </LogoMobile>
+                            {navItems.map((item, index) => {
+                                if (index === navItems.length - 1) {
+                                    return (
+                                        <MainButton
+                                            key={item.label}
+                                            onClick={handleOrderButton}
+                                        >
+                                            {item.label}
+                                        </MainButton>
+                                    );
+                                }
+                                return (
+                                    <NavItem
+                                        key={item.label}
+                                        onClick={() => executeScroll(item.ref)}
+                                    >
+                                        {item.label}
+                                    </NavItem>
+                                );
+                            })}
+                        </MobileNav>
+                    )}
                     <HeaderContainer>
                         <Logo onClick={handleScrollTop()}>
                             <img src={LogoImg} alt="" />
                         </Logo>
+                        <LogoMobile onClick={handleShowMobileNav}>
+                            <img src={LogoImg} alt="" />
+                        </LogoMobile>
                         <NavBar>
                             {navItems.map((item, index) => {
                                 if (index === navItems.length - 1) {
@@ -459,25 +659,6 @@ function Home() {
                                     оригинальности и подлинности.
                                 </DeliveryDescText>
                             </DeliveryDesc>
-                            <DeliveryFormWrap>
-                                <DeliveryForm>
-                                    <DeliveryFormTitle>
-                                        Закажите обратный звонок
-                                    </DeliveryFormTitle>
-                                    <DeliveryFormDesc>
-                                        Для оформления заказа и получения
-                                        дополнительной информации укажите Ваш
-                                        номер телефона. Менеджер свяжеться с
-                                        вами в ближайщее время.
-                                    </DeliveryFormDesc>
-                                    <FormWrap>
-                                        <OrderForm />
-                                    </FormWrap>
-                                </DeliveryForm>
-                                <DeliveryFormImg>
-                                    <img src={Zakaz} alt="" />
-                                </DeliveryFormImg>
-                            </DeliveryFormWrap>
                         </DeliveryContainer>
                     </DeliverySection>
 
@@ -515,6 +696,7 @@ function Home() {
                                             </ProtectionCardTitleImg>
                                             <ProtectionCardTitle>
                                                 Бесплатное гарантийное
+                                                <br />
                                                 обслуживание 1 год
                                             </ProtectionCardTitle>
                                         </ProtectionCardTitleWrap>
@@ -530,6 +712,24 @@ function Home() {
                             </ProtectionCard>
                         </ProtectionContainer>
                     </ProtectionSection>
+                    <DeliveryFormWrap>
+                        <DeliveryForm>
+                            <DeliveryFormTitle>
+                                Закажите обратный звонок
+                            </DeliveryFormTitle>
+                            <DeliveryFormDesc>
+                                Для оформления заказа и получения дополнительной
+                                информации укажите Ваш номер телефона. Менеджер
+                                свяжеться с вами в ближайщее время.
+                            </DeliveryFormDesc>
+                            <FormWrap>
+                                <OrderForm />
+                            </FormWrap>
+                        </DeliveryForm>
+                        <DeliveryFormImg>
+                            <img src={Zakaz} alt="" />
+                        </DeliveryFormImg>
+                    </DeliveryFormWrap>
                 </ContainerWrap>
                 <Footer>
                     <FooterContainer>
