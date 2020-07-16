@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5b5f0107d57ba05cbc9a37e86a5d66df",
+    "revision": "47733d21988dd91cfa49264cac9f1a86",
     "url": "/airpods/index.html"
   },
   {
-    "revision": "600714e135fb82cf62db",
+    "revision": "61cfec0aa28df35f6334",
     "url": "/airpods/static/css/main.96ea0529.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/airpods/static/js/2.77d281db.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "600714e135fb82cf62db",
-    "url": "/airpods/static/js/main.fedd8859.chunk.js"
+    "revision": "61cfec0aa28df35f6334",
+    "url": "/airpods/static/js/main.bd9eefd5.chunk.js"
   },
   {
     "revision": "50190c63c7c4587faae9",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/airpods/static/media/airpods2_1.2ebccbfd.jpg"
   },
   {
-    "revision": "265fedabfca0378d42912ed3738a2782",
-    "url": "/airpods/static/media/airpods2_item.265fedab.jpg"
+    "revision": "1eb1c2c75c07d99e98029c1150bf4ade",
+    "url": "/airpods/static/media/airpods2_new.1eb1c2c7.png"
   },
   {
     "revision": "b5e1a099efda0ea083587b8e6e8ca9f3",

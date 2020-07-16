@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/airpods/static/css/main.96ea0529.chunk.css",
-    "main.js": "/airpods/static/js/main.fedd8859.chunk.js",
-    "main.js.map": "/airpods/static/js/main.fedd8859.chunk.js.map",
+    "main.js": "/airpods/static/js/main.bd9eefd5.chunk.js",
+    "main.js.map": "/airpods/static/js/main.bd9eefd5.chunk.js.map",
     "runtime-main.js": "/airpods/static/js/runtime-main.47e1e059.js",
     "runtime-main.js.map": "/airpods/static/js/runtime-main.47e1e059.js.map",
     "static/js/2.77d281db.chunk.js": "/airpods/static/js/2.77d281db.chunk.js",
     "static/js/2.77d281db.chunk.js.map": "/airpods/static/js/2.77d281db.chunk.js.map",
     "index.html": "/airpods/index.html",
-    "precache-manifest.62b44d3153c5ec02f626e266a7a27045.js": "/airpods/precache-manifest.62b44d3153c5ec02f626e266a7a27045.js",
+    "precache-manifest.008582a60936acd9240501ffeffc4b92.js": "/airpods/precache-manifest.008582a60936acd9240501ffeffc4b92.js",
     "service-worker.js": "/airpods/service-worker.js",
     "static/css/main.96ea0529.chunk.css.map": "/airpods/static/css/main.96ea0529.chunk.css.map",
     "static/js/2.77d281db.chunk.js.LICENSE.txt": "/airpods/static/js/2.77d281db.chunk.js.LICENSE.txt",
@@ -18,7 +18,7 @@
     "static/media/airpods1_1.jpg": "/airpods/static/media/airpods1_1.0184b10e.jpg",
     "static/media/airpods1_item.jpg": "/airpods/static/media/airpods1_item.78b7cdff.jpg",
     "static/media/airpods2_1.jpg": "/airpods/static/media/airpods2_1.2ebccbfd.jpg",
-    "static/media/airpods2_item.jpg": "/airpods/static/media/airpods2_item.265fedab.jpg",
+    "static/media/airpods2_new.png": "/airpods/static/media/airpods2_new.1eb1c2c7.png",
     "static/media/airpodspro_item.jpg": "/airpods/static/media/airpodspro_item.b5e1a099.jpg",
     "static/media/apple-airpods_2.jpg": "/airpods/static/media/apple-airpods_2.89e71837.jpg",
     "static/media/apple-airpods_3.jpg": "/airpods/static/media/apple-airpods_3.9154bac0.jpg",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.47e1e059.js",
     "static/js/2.77d281db.chunk.js",
     "static/css/main.96ea0529.chunk.css",
-    "static/js/main.fedd8859.chunk.js"
+    "static/js/main.bd9eefd5.chunk.js"
   ]
 }
