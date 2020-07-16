@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { ImgWrap, Container, ContainerWrap, Button } from '../General';
 import Airpods1 from '../../images/airpods1_item.jpg';
-import Airpods2 from '../../images/airpods2_item.jpg';
+import Airpods2 from '../../images/airpods2/airpods2_new.png';
 import AirpodsPro from '../../images/airpodspro_item.jpg';
 import Product from '../Product';
 import Airpods11 from '../../images/airpods1/airpods1_1.jpg';
@@ -63,19 +63,18 @@ const CatalogItem = styled.div`
 
 const CatalogItemImg = styled(ImgWrap)`
     width: 200px;
-    height: 366px;
+    height: 300px;
     margin-bottom: 1rem;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 `;
 
 const CatalogItemLabel = styled.div`
     font-size: 1.7rem;
     font-weight: bold;
-    margin-bottom: 1rem;
     text-align: center;
-    min-height: 72px;
 
     span {
         font-size: 1.3rem;
@@ -88,41 +87,38 @@ const CatalogItemPrice = styled.div`
     margin-bottom: 1rem;
 `;
 
+const CatalogSubtitle = styled.div`
+    text-align: center;
+`;
+
 const CatalogItemButton = styled(Button)``;
+
+const LabelWrap = styled.div`
+    min-height: 80px;
+`;
 
 const catalogList = [
     {
-        label: <CatalogItemLabel>Air Pods 1</CatalogItemLabel>,
-        price: '8490 грн',
+        label: 'AirPods 1',
+        price: '2690 грн',
         image: Airpods1,
-        title: 'Наушники Apple AirPods 1',
+        subtitle: 'Версия модели MMEF2',
         photos: [Airpods11, Airpods12, Airpods13],
         id: 1,
     },
     {
-        label: (
-            <CatalogItemLabel>
-                Air Pods 2<br />
-                <span>(Wireless case)</span>
-            </CatalogItemLabel>
-        ),
-        price: '9490 грн',
+        label: 'AirPods 2',
+        price: '3090 грн',
         image: Airpods2,
-        title: 'Наушники Apple AirPods 2 с возможностью беспроводной зарядки',
+        subtitle: 'Кейс с беспроводной зарядкой, версия модели MRXJ2',
         photos: [Airpods21, Airpods22, Airpods23],
         id: 2,
     },
     {
-        label: (
-            <CatalogItemLabel>
-                Air Pods Pro
-                <br />
-                <span>(Последняя версия)</span>
-            </CatalogItemLabel>
-        ),
-        price: '11 490 грн',
+        label: ' AirPods Pro',
+        price: '5490 грн',
         image: AirpodsPro,
-        title: 'Наушники Apple AirPods Pro (Последняя версия)',
+        subtitle: 'Последняя версия с функцией шумоподавления',
         photos: [AirpodsPro1, AirpodsPro2, AirpodsPro3],
         id: 3,
     },
@@ -164,12 +160,19 @@ const Catalog = React.forwardRef(({ orderHandler }, ref) => {
                 {overview ? (
                     <CatalogContainer>
                         {catalogList.map(
-                            ({ label, image, price, id }, index) => (
+                            ({ label, image, price, id, subtitle }, index) => (
                                 <CatalogItem
                                     key={index}
                                     onClick={handleCurrentProduct(index)}
                                 >
-                                    {label}
+                                    <LabelWrap>
+                                        <CatalogItemLabel>
+                                            {label}
+                                        </CatalogItemLabel>
+                                        <CatalogSubtitle>
+                                            {`(${subtitle})`}
+                                        </CatalogSubtitle>
+                                    </LabelWrap>
                                     <CatalogItemImg>
                                         <img src={image} alt="" />
                                     </CatalogItemImg>

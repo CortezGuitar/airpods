@@ -162,7 +162,9 @@ const DeliverySection = styled.section`
     padding: 1rem 0;
 `;
 
-const DeliveryContainer = styled(Container)``;
+const DeliveryContainer = styled(Container)`
+    text-align: center;
+`;
 
 const DeliveryTitle = styled.div`
     font-size: 3rem;
@@ -210,15 +212,17 @@ const DeliveryDesc = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding: 1rem 1rem 2rem 8rem;
+    padding: 2rem 1rem 2rem 8rem;
     position: relative;
     justify-content: flex-start;
     margin: 1rem 0;
+    text-align: left;
 `;
 
 const DeliveryDescTitle = styled.div`
     font-size: 3rem;
     font-weight: bold;
+    margin-bottom: 2rem;
 
     @media all and (max-width: 767px) {
         font-size: 1.5rem;
@@ -249,7 +253,7 @@ const ProtectionTitle = styled.div`
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    margin: 1rem 0 3rem;
+    margin: 1rem 0 2rem;
 
     @media all and (max-width: 767px) {
         margin: 0 0 2rem;
@@ -644,16 +648,17 @@ function Home() {
                         </DeliveryTitleWrap>
 
                         <DeliveryContainer>
+                            <DeliveryDescTitle>
+                                Условия и оплата
+                            </DeliveryDescTitle>
                             <DeliveryDesc>
                                 <DeliveryDescImg>
                                     <img src={Medal} alt="" />
                                 </DeliveryDescImg>
-                                <DeliveryDescTitle>
-                                    Условия и оплата
-                                </DeliveryDescTitle>
+
                                 <DeliveryDescText>
                                     Доставка Новой Почтой в день получения
-                                    заказа, оплата наложенным платежем. Прежде
+                                    заказа, оплата наложенным платежом. Прежде
                                     чем оплатить покупку, вы сможете
                                     синхронизировать наушники с вашим смартфоном
                                     и послушать звучание, что бы убедиться в их
@@ -721,7 +726,7 @@ function Home() {
                             <DeliveryFormDesc>
                                 Для оформления заказа и получения дополнительной
                                 информации укажите Ваш номер телефона. Менеджер
-                                свяжеться с вами в ближайщее время.
+                                свяжется с вами в ближайшее время.
                             </DeliveryFormDesc>
                             <FormWrap>
                                 <OrderForm />

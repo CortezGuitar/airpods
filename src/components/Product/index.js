@@ -37,7 +37,8 @@ const DescWrap = styled.div`
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
+    position: relative;
 `;
 
 const ProductBigPhoto = styled(ImgWrap)`
@@ -66,6 +67,9 @@ const SmallPhotosList = styled.div`
 const BackBtn = styled(Button)`
     padding: 0 1rem;
     height: 2.5rem;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
 
     @media all and (max-width: 767px) {
         display: none;
@@ -73,6 +77,8 @@ const BackBtn = styled(Button)`
 `;
 
 const BackBtnMobile = styled(Button)`
+    display: none;
+
     @media all and (max-width: 767px) {
         width: 100%;
         opacity: 0.6;
@@ -82,6 +88,7 @@ const BackBtnMobile = styled(Button)`
 const ProductTitleWrap = styled.div`
     display: flex;
     margin-bottom: 2rem;
+    flex-direction: column;
 `;
 
 const ProductTitle = styled.div`
@@ -156,26 +163,29 @@ const ProductInfoLabel = styled.div`
 
 const ProductOrderBtn = styled(Button)`
     width: 318px;
-    align-self: flex-end;
+    align-self: center;
     margin-top: 2rem;
 
     @media all and (max-width: 768px) {
-        margin: 2rem auto;
+        margin-bottom: 1rem;
     }
     @media all and (max-width: 767px) {
         width: 100%;
-        margin: 2rem auto 1rem auto;
     }
 `;
 
+const ProductSubtitle = styled.div`
+    text-align: center;
+`;
+
 const infoList = [
-    'Новой Почтой по всей Украине, отправка в день заказа',
+    'Отправка Новой Почтой по всей Украине в день заказа',
     'Гарантия 12 месяцев, обмен/возврат в течении 14 дней',
-    'Наличными при получении',
+    'Оплата наличными при получении',
 ];
 
 function Product({ product, backBtn, orderBtn }) {
-    const { price, title, photos } = product;
+    const { price, label, photos, subtitle } = product;
 
     const [currentPhoto, setCurrentPhoto] = useState(0);
 
@@ -213,9 +223,10 @@ function Product({ product, backBtn, orderBtn }) {
                 </PhotosWrap>
             )}
             <DescWrap>
+                <BackBtn onClick={handleBackBtn}>назад</BackBtn>
                 <ProductTitleWrap>
-                    <ProductTitle>{title}</ProductTitle>
-                    <BackBtn onClick={handleBackBtn}>назад</BackBtn>
+                    <ProductTitle>{label}</ProductTitle>
+                    <ProductSubtitle>{`(${subtitle})`}</ProductSubtitle>
                 </ProductTitleWrap>
                 <ProductInfo>
                     <ProductPrice>
