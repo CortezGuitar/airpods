@@ -597,7 +597,7 @@ function Home(props) {
                                 );
                             })}
                         </NavBar>
-                        <HeaderContact>38(000)123-12-32</HeaderContact>
+                        <HeaderContact>38 (093) 336-45-78</HeaderContact>
                     </HeaderContainer>
                 </Header>
 
@@ -745,7 +745,7 @@ function Home(props) {
                         <MainButton onClick={handleOrderButton}>
                             Заказать звонок
                         </MainButton>
-                        <HeaderContact>38(000)123-12-32</HeaderContact>
+                        <HeaderContact>38 (093) 336-45-78</HeaderContact>
                     </FooterContainer>
                 </Footer>
             </OverlayWrap>
