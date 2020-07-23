@@ -35,7 +35,7 @@ const FormSubmit = styled(Button)`
     width: 100%;
 `;
 
-function OrderForm() {
+function OrderForm({ hideOverlay }) {
     const [values, setValues] = useState({ name: '', phone: '' });
 
     const handleChange = (e) => {
@@ -46,11 +46,21 @@ function OrderForm() {
         });
     };
 
+    const token = '1161986942:AAHToGYHNGcXZSb-QeSHql6YGuaWJokDEVc';
+    const channel = '545174508';
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(values.phone.length);
         setValues({ name: '', phone: '' });
-        alert(`${values.name} ${values.phone}`);
+        fetch(
+            `https://api.telegram.org/bot${token}/sendMessage?chat_id=${channel}&text=${
+                values.name + ' / ' + values.phone
+            }`,
+            { method: 'GET' }
+        )
+            .then((res) => res.json())
+            .then(() => hideOverlay())
+            .catch(() => hideOverlay());
     };
 
     return (

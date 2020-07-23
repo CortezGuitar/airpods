@@ -467,7 +467,7 @@ const scrollToRef = (ref) =>
         behavior: 'smooth',
     });
 
-function Home() {
+function Home(props) {
     const [overlay, setShowOverlay] = useState(false);
     const [positionY, setPositionY] = useState(0);
     const [mobileNav, setShowMobileNav] = useState(false);
@@ -536,7 +536,7 @@ function Home() {
 
     return (
         <HomeWrapper overlay={overlay}>
-            {overlay && <Popup />}
+            {overlay && <Popup hideOverlay={handleHideOverlay} />}
 
             <Overlay show={overlay} onClick={handleHideOverlay} />
             <OverlayWrap show={overlay}>
@@ -622,7 +622,7 @@ function Home() {
                                 </MainSectionTitleWrap>
                             </MainSectionContent>
                             <MainSectionFooter>
-                                Список моделей Apple AipPods
+                                Список моделей Apple AirPods
                             </MainSectionFooter>
                         </MainSectionContainer>
                     </MainSection>

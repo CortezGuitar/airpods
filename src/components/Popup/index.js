@@ -32,10 +32,10 @@ const PopupWrap = styled.div`
     }
 `;
 
-function Popup() {
+function Popup({ hideOverlay }) {
     return (
         <PopupWrap>
-            <OrderForm />
+            <OrderForm hideOverlay={hideOverlay} />
         </PopupWrap>
     );
 }
